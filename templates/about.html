@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{% extends 'base.html' %} {% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  {% block content %}
+  <style>
+    .container1 {
+      display: flex;
+      justify-content: space-around;
+      /* align-items: center; */
+      margin: 80px 0;
+    }
+
+    .container1 .leftpart {
+      width: 50%;
+    }
+
+    .container1 .rightpart img {
+      width: 300px;
+      height: 300px;
+      margin: 5px -85px;
+    }
+    .container2 {
+      display: flex;
+      justify-content: space-around;
+      /* align-items: center; */
+      margin: 80px 0;
+    }
+
+    .container2 .leftpart {
+      width: 50%;
+    }
+
+    .container2 .rightpart {
+      width: 15%;
+      margin: 42px -85px;
+      display: flex;
+      justify-content: center;
+      
+    }
+
+    .image {
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+
+      
+    }
+  </style>
+  <body>
+    <div class="container1">
+      <div class="leftpart">
+        <h2>Family</h2>
+        <p>
+          I am living with my family in South Korea. Name of my wife is Yang. We
+          have a daughter. Her name is Keyana. She is six and goes to
+          pre-school. we are hiking family. On free time we hike near by
+          mountains. There are lots of mountains near my place. We mostly hike
+          in spring and fall.
+        </p>
+      </div>
+      <div class="rightpart">
+        <img src="{% static 'images/fampic1.jpg' %}" alt="" />
+      </div>
+    </div>
+
+    <div class="container2">
+      <div class="leftpart">
+        <h2>Cycling and Photography</h2>
+        <p>
+          My other hobbies includes cycling and photography. Seoul is famous for
+          well developed cycling routes. I love cycling in those routes mostly
+          in summer and fall. I love to take pictures. I like to capture
+          pictures of the landscape and nature. I am also the winner of few
+          photographic competitions in Nepal.
+        </p>
+      </div>
+      <div class="rightpart">
+        <img class="image" src="{% static 'images/pic3.jpg' %}" alt="" />
+        <img class="image" src="{% static 'images/pic4.jpg' %}" alt="" />
+      </div>
+    </div>
+    </div>
+    <div class="container2">
+      <div class="leftpart">
+        <h2>Python and Web Design</h2>
+        <p>
+          Recently, my interest in computer programming is increasing. I also love to spend my spare time in
+          web designing. I have basic understanding of HTML and CSS. This website you are looking at, is developed by me.
+          I also have basic understanding of python programming. 
+        </p>
+      </div>
+      <div class="rightpart">
+        <img class="image" src="{% static 'images/html_css.png' %}" alt="" />
+        <img class="image" src="{% static 'images/python.png' %}" alt="" />
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </body>
+</html>
+{% endblock content %}

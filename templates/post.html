@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends 'base.html' %} {% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% block content %}
+    <style>
+      .publications {
+        margin: 20px;
+        padding: 10px;
+      }
+
+      .heading {
+        padding: 40px;
+        margin: -47px -14px;
+      }
+    </style>
+
+    <div class="heading">
+      <h2>These are the list of my publications.</h2>
+    </div>
+
+    {% for post in post_list %}
+    <div class="publications">
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.body }}</p>
+
+      <a href="{{ post.covers.url }}"><button>FULL-ARTICLE</button></a>
+    </div>
+
+    {% endfor %} {% endblock content %}
+  </body>
+</html>

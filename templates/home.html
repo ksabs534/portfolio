@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% extends 'base.html' %} {% load static %}
+<title>Home</title>
+{% block content %}
+
+<!-- <link rel="stylesheet" href="{% static 'css/home.css' %}" /> -->
+
+<style>
+  .firstsection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 80px 0;
+  }
+
+  .firstsection > div {
+    width: 30%;
+  }
+
+  .leftsection {
+    font-size: 2rem;
+    margin: 30px 0;
+  }
+
+  .rightsection img {
+    width: 100%;
+    margin: 50px 20px;
+  }
+
+  p {
+    /* border: 2px solid; */
+    width: 140%;
+  }
+  span {
+    font-size: 1.6em;
+    color: rgb(10, 133, 161);
+  }
+
+  .leftsection p {
+    font-size: 20px;
+  }
+
+  .rightsection img {
+    border-radius: 50%;
+  }
+  .button {
+    border: 3px soildi rebeccapurple;
+    position: absolute;
+    left: 15%;
+    top: 73%;
+    transition: 0.4s ease;
+  }
+  .button button {
+    padding: 14px;
+    font-size: 20px;
+    color: rgb(10, 133, 161);
+    border-radius: 10px;
+  }
+
+  .button button a:hover {
+    color: rgb(139, 55, 13);
+    font-size: 23px;
+    cursor: pointer;
+  }
+</style>
+<main>
+  <section class="firstsection">
+    <div class="leftsection">
+      <h3>Hello! I'm KESHAB</h3>
+      <p>
+        <span>A Bit About Me</span><br />
+        I am originally from Nepal and now living and working in South Korea.
+        I've graduated from the University of Ulsan, South Korea. I did my major
+        in Environmental Engineering. I was researcher at the Ecosystem
+        laboratory. I am interested research and data analysis. <br />
+        In recent days, i am engaging myself in python, and web designing. The
+        website you're looking at is designed and developed by me.
+      </p>
+    </div>
+    <div class="rightsection">
+      <img src="{% static 'images/pic2.jpg' %}" alt="" />
+    </div>
+  </section>
+  <div class="button">
+    <button>
+      <a href="{% static 'images/BIO_DATA.jpg'%}">BIO-DATA</a><img />
+    </button>
+  </div>
+</main>
+{% endblock content %}
